@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kay's Kitchen | Catering Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #ff6347;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ff6347;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-form button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #e5533b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Kay's Kitchen</h1>
+        <p>Your trusted catering partner for any event</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to Kay's Kitchen!</h2>
+        <p>At Kay's Kitchen, we provide delicious, freshly prepared meals for all kinds of events, from corporate meetings to weddings and parties. Our expert chefs use only the finest ingredients to create dishes that will leave your guests impressed and satisfied.</p>
+    </section>
+
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-item">
+            <span>Chicken Alfredo</span>
+            <span>$15.99</span>
+        </div>
+        <div class="menu-item">
+            <span>Vegetable Stir-Fry</span>
+            <span>$12.99</span>
+        </div>
+        <div class="menu-item">
+            <span>Beef Wellington</span>
+            <span>$24.99</span>
+        </div>
+        <div class="menu-item">
+            <span>Grilled Salmon</span>
+            <span>$18.99</span>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Kay's Kitchen</h2>
+        <p>Founded in 2010 by Kay Smith, Kay's Kitchen has been serving high-quality catering services across the region. Our team is passionate about food, and we aim to make every meal a memorable experience for our clients. Whether you're hosting an intimate dinner or a large-scale event, we're here to cater to your needs.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions? Want to book our services? Reach out to us, and we'll get back to you as soon as possible!</p>
+        <form class="contact-form" action="mailto:kayskitchen@example.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Kay's Kitchen | All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
