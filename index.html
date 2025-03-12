@@ -17,11 +17,7 @@
         .container {
             text-align: center;
             padding: 50px;
-        }
-        .header {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
+        border-radius: 10px;
         }
         .header h1 {
             margin: 0;
@@ -29,11 +25,14 @@
         }
         .welcome-screen {
             display: none;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-image: url('welcome-background-image-url.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
             padding: 20px;
             border-radius: 10px;
+            color: white;
         }
-        .catalogue {
+        .catalogue, .menu-page {
             display: none;
             margin-top: 30px;
         }
@@ -61,16 +60,55 @@
             border-radius: 5px;
             background-color: #333;
             color: #fff;
+            transition: background-color 0.3s;
+        }
+        .nav-buttons button:hover {
+            background-color: #555;
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .menu h3 {
+            margin: 10px 0;
+        }
+        .menu-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px 0;
+        }
+        .menu-nav-buttons button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+        .menu-nav-buttons button:hover {
+            background-color: #555;
         }
     </style>
     <script>
         function showWelcomeScreen() {
             document.querySelector('.welcome-screen').style.display = 'block';
             document.querySelector('.catalogue').style.display = 'none';
+            document.querySelector('.menu-page').style.display = 'none';
         }
         function showCatalogue() {
             document.querySelector('.welcome-screen').style.display = 'none';
             document.querySelector('.catalogue').style.display = 'block';
+            document.querySelector('.menu-page').style.display = 'none';
+        }
+        function showMenuPage() {
+            document.querySelector('.welcome-screen').style.display = 'none';
+            document.querySelector('.catalogue').style.display = 'none';
+            document.querySelector('.menu-page').style.display = 'block';
         }
     </script>
 </head>
@@ -83,6 +121,7 @@
         <div class="welcome-screen">
             <h2>Welcome to Thusi's Kitchen!</h2>
             <p>We are delighted to serve you the best dishes for your special events.</p>
+            <button onclick="showMenuPage()">Explore Our Menu</button>
         </div>
         <div class="catalogue">
             <h2>Our Catalogue</h2>
@@ -90,6 +129,22 @@
                 <img src="image1-url.jpg" alt="Delicious Dish 1">
                 <img src="image2-url.jpg" alt="Delicious Dish 2">
                 <img src="image3-url.jpg" alt="Delicious Dish 3">
+            </div>
+        </div>
+        <div class="menu-page">
+            <h2>Menu</h2>
+            <div class="menu">
+                <h3>African Cuisine</h3>
+                <h3>Italian Cuisine</h3>
+                <h3>French Cuisine</h3>
+                <h3>Indian Cuisine</h3>
+                <h3>Korean Cuisine</h3>
+                <h3>Drinks</h3>
+                <h3>Desserts</h3>
+            </div>
+            <div class="menu-nav-buttons">
+                <button onclick="showCatalogue()">Previous</button>
+                <button onclick="showWelcomeScreen()">Next</button>
             </div>
         </div>
         <div class="nav-buttons">
