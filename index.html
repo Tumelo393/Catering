@@ -1,170 +1,81 @@
-.<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thusi's Kitchen</title>
+    <title>KAY's Kitchen</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('background-image-image.jfif');
-            background-size: cover;
-            background-repeat: no-repeat;
-            color: #333;
             margin: 0;
             padding: 0;
+            background-color: #f8f8f8;
         }
-        .container {
-            text-align: center;
-            padding: 50px;
-        border-radius: 10px;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 3em;
-        }
-        .welcome-screen {
-            display: none;
-            background-image: url('welcome-background-image-url.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
+        header {
+            background-color: #a435f0;
+            color: white;
             padding: 20px;
-            border-radius: 10px;
-            color: green;
+            text-align: center;
         }
-        .catalogue, .menu-page {
-            display: none;
-            margin-top: 30px;
-        }
-        .gallery {
+        nav {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .gallery img {
-            width: 300px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        .nav-buttons {
-            margin-top: 20px;
-        }
-        .nav-buttons button {
-            padding: 10px 20px;
-            margin: 5px;
-            font-size: 1em;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
             background-color: #333;
-            color: #fff;
-            transition: background-color 0.3s;
         }
-        .nav-buttons button:hover {
-            background-color: #555;
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
         }
-        .menu {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        nav a:hover {
+            background-color: #575757;
         }
-        .menu h3 {
-            margin: 10px 0;
+        section {
+            padding: 20px;
+            text-align: center;
         }
-        .menu-nav-buttons {
-            display: flex;
-            justify-content: space-between;
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
             width: 100%;
-            max-width: 600px;
-            margin: 20px 0;
-        }
-        .menu-nav-buttons button {
-            padding: 10px 20px;
-            font-size: 1em;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
-            background-color: #333;
-            color: #fff;
-            transition: background-color 0.3s;
-        }
-        .menu-nav-buttons button:hover {
-            background-color: #555;
         }
     </style>
-    <script>
-        function showWelcomeScreen() {
-            document.querySelector('.welcome-screen').style.display = 'block';
-            document.querySelector('.catalogue').style.display = 'none';
-            document.querySelector('.menu-page').style.display = 'none';
-        }
-        function showCatalogue() {
-            document.querySelector('.welcome-screen').style.display = 'none';
-            document.querySelector('.catalogue').style.display = 'block';
-            document.querySelector('.menu-page').style.display = 'none';
-        }
-        function showMenuPage() {
-            document.querySelector('.welcome-screen').style.display = 'none';
-            document.querySelector('.catalogue').style.display = 'none';
-            document.querySelector('.menu-page').style.display = 'block';
-        }
-    </script>
 </head>
-<body onload="showWelcomeScreen()">
-    <div class="container">
-        <div class="header">
-            <h1>Thusi's Kitchen</h1>
-            <p>Delicious Catering for Every Occasion</p>
-        </div>
-        <div class="welcome-screen">
-            <h2>Welcome to Thusi's Kitchen!</h2>
-            <p>We are delighted to serve you the best dishes for your special events.</p>
-            <button onclick="showMenuPage()">Explore Our Menu</button>
-        </div>
-       <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-        </div>
-        <div class="menu-page">
-            <h2>Menu</h2>
-            <div class="menu">
-                <h3>African Cuisine</h3>
-                <h3>Italian Cuisine</h3>
-                <h3>French Cuisine</h3>
-                <h3>Indian Cuisine</h3>
-                <h3>Korean Cuisine</h3>
-                <h3>Drinks</h3>
-                <h3>Desserts</h3>
-            </div>
-            <div class="menu-nav-buttons">
-                <button onclick="showCatalogue()">Previous</button>
-                <button onclick="showWelcomeScreen()">Next</button>
-            </div>
-        </div>
-        <div class="nav-buttons">
-            <button onclick="showWelcomeScreen()">Welcome</button>
-            <button onclick="showCatalogue()">Catalogue</button>
-        </div>
-    </div>
+<body>
+    <header>
+        <h1>Welcome to Delicious Bites Catering</h1>
+        <p>Your partner for memorable meals and events!</p>
+    </header>
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At Delicious Bites Catering, we bring flavor, style, and creativity to every event. From intimate gatherings to grand celebrations, we have you covered!</p>
+    </section>
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Wedding Catering</li>
+            <li>Corporate Events</li>
+            <li>Private Parties</li>
+            <li>Custom Menus</li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Phone: +123 456 7890</p>
+        <p>Email: contact@deliciousbites.com</p>
+        <p>Address: 123 Flavor Street, Gaborone, Botswana</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 Delicious Bites Catering. All rights reserved.</p>
+    </footer>
 </body>
 </html>
